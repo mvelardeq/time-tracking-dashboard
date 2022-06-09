@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main class="container">
+    <section class="profile-card rounded">
+      <article class="profile-info rounded">
+        <img src="./images/image-jeremy.png" alt="" class="profile-avatar">
+        <div class="profile-username">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </article>
+      <article class="viewing-track p-1">
+        <ul class="list-viewing">
+          <li>Daily</li>
+          <li class="active">Weekly</li>
+          <li>Monthly</li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+  
+  <template>
+    <article class="viewing-card rounded">
+      <img src="" alt="" class="icon-viewing">
+      <div class="info-card p-1 rounded">
+        <section class="title">
+          <h4 class="title-viewing"></h4>
+          <div class="icon-ellipsis">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+        </section>
+        <section class="time-frames">
+          <h2 class="current"><span></span>hrs</h2>
+          <p class="previous">Last Week - <span></span>hrs</p>
+        </section>
+      </div>
+    </article>
+  </template>
+  <script src="index.js"></script>
+</body>
+</html>

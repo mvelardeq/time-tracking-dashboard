@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --blue: hsl(246, 80%, 60%);
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-self-care: hsl(43, 84%, 65%);
+
+    
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+img{
+    display: block;
+}
+li{
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: var(--very-dark-blue);
+}
+
+main.container{
+    padding: 1rem;
+    min-width: 300px;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns:  repeat(auto-fit,minmax(180px,1fr));
+    gap: 1rem;
+}
+.profile-card{
+    grid-row: 1/3;
+    background-color: var(--dark-blue);
+}
+.profile-info{
+    padding: 1.1rem;
+    height: 67%;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.profile-avatar{
+    width: 3.8rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.profile-username p{
+    font-size: 0.7rem;
+    font-weight: 300;
+    margin-bottom: 0.2rem;
+    color: var(--pale-blue);
+}
+.profile-username h1{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.viewing-track{
+    height: 33%;
+}
+.viewing-track ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--desaturated-blue);
+    font-size: 0.8rem;
+}
+.viewing-track ul li{
+    transition: all 0.4s;
+}
+.viewing-track ul li:hover,.viewing-track ul li.active{
+    cursor: pointer;
+    color: #fff;
+}
+
+.viewing-card{
+    min-height: 200px;
+    position: relative;
+}
+.info-card{
+    min-height: 170px;
+    margin-top: auto;
+    background-color: var(--dark-blue);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s;
+}
+.info-card:hover{
+    cursor: pointer;
+    background-color: var(--blue);
+}
+.info-card .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.info-card .title h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.info-card .title .icon-ellipsis:hover {
+    cursor: pointer;
+}
+.time-frames .current{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 0.6rem;
+}
+.time-frames .previous{
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--pale-blue);
+}
+
+
+@media (max-width:850px){
+    main.container{
+        width: 100%;
+        grid-template-columns:  1fr;
+    }
+    .profile-info{
+        padding: 1.5rem 1.1rem;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .profile-avatar{
+        width: 3rem;
+    }
+    .profile-username h1{
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    .viewing-track{
+        height: auto;
+    }
+    .viewing-track ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 0.8rem;
+    }
+
+    .viewing-card{
+        min-height: 135px;
+        position: relative;
+    }
+    .info-card{
+        min-height: auto;
+    }
+    .time-frames{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .time-frames .current{
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+}
+
+
+.p-1{
+    padding: 1.1rem;
+}
+.rounded{
+    border-radius: 0.6rem;
+}
+
+
+.work-card{
+    background: url(./images/icon-work.svg) top right 10%/22% no-repeat var(--light-red-work);
+}
+.play-card{
+    background: url(./images/icon-play.svg) top right 10%/22% no-repeat var(--soft-blue-play);
+}
+.study-card{
+    background: url(./images/icon-study.svg) top right 10%/22% no-repeat var(--light-red-study);
+}
+.exercise-card{
+    background: url(./images/icon-exercise.svg) top right 10%/22% no-repeat var(--lime-green-exercise);
+}
+.social-card{
+    background: url(./images/icon-social.svg) top right 10%/22% no-repeat var(--violet-social);
+}
+.self-care-card{
+    background: url(./images/icon-self-care.svg) top right 10%/22% no-repeat var(--soft-orange-self-care);
+}
